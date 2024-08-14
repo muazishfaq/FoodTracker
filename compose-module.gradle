@@ -30,11 +30,11 @@ android {
     compileOptions {
         coreLibraryDesugaringEnabled true
 
-        sourceCompatibility JavaVersion.VERSION_18
-        targetCompatibility JavaVersion.VERSION_18
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '18'
+        jvmTarget = '17'
     }
 }
 
@@ -58,7 +58,7 @@ dependencies {
     testImplementation Testing.coroutines
     testImplementation Testing.turbine
     testImplementation Testing.composeUiTest
-    testImplementation Testing.mockk
+//    testImplementation Testing.mockk
     testImplementation Testing.mockWebServer
 
     androidTestImplementation Testing.junit4
@@ -67,7 +67,7 @@ dependencies {
     androidTestImplementation Testing.coroutines
     androidTestImplementation Testing.turbine
     androidTestImplementation Testing.composeUiTest
-    androidTestImplementation Testing.mockk
+//    androidTestImplementation Testing.mockk
     androidTestImplementation Testing.mockWebServer
     androidTestImplementation Testing.hiltTesting
 }
