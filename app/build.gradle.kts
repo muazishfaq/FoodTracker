@@ -58,6 +58,8 @@ android {
 dependencies {
     implementation(Compose.compiler)
     implementation(Compose.ui)
+    implementation(Compose.uiUnit)
+    implementation(Compose.runtimeAndroid)
     implementation(Compose.uiToolingPreview)
     implementation(Compose.hiltNavigationCompose)
     implementation(Compose.material)
@@ -70,6 +72,7 @@ dependencies {
     kapt(DaggerHilt.hiltCompiler)
 
     implementation(project(Modules.core))
+    implementation(project(Modules.coreUi))
     implementation(project(Modules.onboardingPresentation))
     implementation(project(Modules.onboardingDomain))
     implementation(project(Modules.trackerPresentation))

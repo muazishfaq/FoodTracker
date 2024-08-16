@@ -6,14 +6,10 @@ plugins {
 apply(from = "$rootDir/compose-module.gradle")
 
 android {
-    namespace = "com.gms.onboarding_presentation"
+    namespace = "com.gms.core_ui"
 }
 
 dependencies {
-    implementation(project(Modules.core))
-    implementation(project(Modules.coreUi))
-    implementation(project(Modules.onboardingDomain))
-
     implementation(Kotlin.kotlinStdVersion)
     coreLibraryDesugaring(Build.jdkLibPlugin)
 }
