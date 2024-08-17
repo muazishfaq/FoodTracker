@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">FoodTracker</string>
     <string name="welcome_text">Hello! Let\'s find out more about you :)</string>
+    <string name="btn_next">Next</string>
 </resources>
