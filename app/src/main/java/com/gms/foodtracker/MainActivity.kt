@@ -10,6 +10,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.gms.core.navigation.Route
+import com.gms.foodtracker.navigation.navigate
 import com.gms.foodtracker.ui.theme.FoodTrackerTheme
 import com.gms.onboarding_presentation.welcome.WelcomeScreen
 
@@ -23,7 +28,40 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    WelcomeScreen()
+                    val navController = rememberNavController()
+                    NavHost(navController = navController, startDestination = Route.WELCOME) {
+                        composable(Route.WELCOME) {
+                            WelcomeScreen(onNavigate = navController::navigate)
+                        }
+                        composable(route = Route.AGE) {
+
+                        }
+                        composable(route = Route.GENDER) {
+
+                        }
+                        composable(route = Route.HEIGHT) {
+
+                        }
+                        composable(route = Route.WEIGHT) {
+
+                        }
+                        composable(route = Route.NUTRIENT_GOAL) {
+
+                        }
+                        composable(route = Route.ACTIVITY) {
+
+                        }
+                        composable(route = Route.GOAL) {
+
+                        }
+                        composable(route = Route.TRACKER_OVERVIEW) {
+
+                        }
+                        composable(route = Route.SEARCH) {
+
+                        }
+                    }
+
                 }
             }
         }
