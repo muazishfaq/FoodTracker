@@ -119,3 +119,7 @@ dependencies {
     implementation(Kotlin.kotlinStdVersion)
     coreLibraryDesugaring(Build.jdkLibPlugin)
 }
+
+hilt {
+    enableAggregatingTask = false
+}
