@@ -16,8 +16,11 @@ import androidx.navigation.compose.rememberNavController
 import com.gms.core.navigation.Route
 import com.gms.foodtracker.navigation.navigate
 import com.gms.foodtracker.ui.theme.FoodTrackerTheme
+import com.gms.onboarding_presentation.gender.GenderScreen
 import com.gms.onboarding_presentation.welcome.WelcomeScreen
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +40,7 @@ class MainActivity : ComponentActivity() {
 
                         }
                         composable(route = Route.GENDER) {
-
+                            GenderScreen(onNavigation = navController::navigate)
                         }
                         composable(route = Route.HEIGHT) {
 
