@@ -3,7 +3,15 @@
     <string name="welcome_text">Hello! Let\'s find out more about you :)</string>
     <string name="btn_next">Next</string>
 
+    <!--Gender view strings-->
     <string name="txt_whats_gender">What\'s your gender?</string>">
     <string name="btn_male">Male</string>">
     <string name="btn_female">Female</string>">
+
+    <!--Age view strings-->
+    <string name="txt_enter_age">Enter your age</string>">
+    <string name="unit_age_years">Year</string>">
+    <string name="txt_error_age_cant_be_empty">Invalid age, please enter the valid age.</string>
+
+    
 </resources>
